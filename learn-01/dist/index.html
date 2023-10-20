@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="static/css/base.css" rel="stylesheet">
+    <link href="static/css/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.font.im/css?family=Source+Serif+Pro%7CLato%7CInconsolata" rel="stylesheet"
+        type="text/css">
+    <title> 前端基础知识教学1 </title>
+    <!-- browser favicon -->
+    <link rel="shortcut icon" href="static/img/favicon.png">
+    <style>
+        .font-sans {
+            font-family: 'Lato', 'SimHei', 'STHeiti', 'SimHei', 'Serif';
+        }
+
+        .font-serif {
+            font-family: 'Source Serif Pro', 'Songti SC', 'SimSun', 'Serif', serif;
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="https://jyywiki.cn/static/katex/katex.min.css">
+    <script defer src="https://jyywiki.cn/static/katex/katex.min.js"></script> -->
+    <link rel="stylesheet" href="static/katex/katex.min.css">
+    <script defer src="static/katex/katex.min.js"></script>
+    <!-- <script defer src="https://jyywiki.cn/static/katex/auto-render.min.js"
+        integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+        crossorigin="anonymous"></script> -->
+    <script defer src="static/katex/auto-render.min.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            renderMathInElement(document.body, {
+                // customised options
+                // &#8226; auto-render specific keys, e.g.:
+                delimiters: [
+                    { left: '$$', right: '$$', display: true },
+                    { left: '$', right: '$', display: false },
+                    { left: '\\(', right: '\\)', display: false },
+                    { left: '\\[', right: '\\]', display: true }
+                ],
+                // &#8226; rendering keys, e.g.:
+                throwOnError: false
+            });
+        });
+    </script>
+
+    <link rel="stylesheet" href="static/reveal/reveal.css">
+    <link rel="stylesheet" href="static/reveal/theme/simple.css" id="theme">
+    <link rel="stylesheet" href="static/jyy/jyy.css">
+
+</head>
+
+<body class="d-flex flex-column h-100">
+
+    <div class="reveal">
+        <div class="slides">
+            <section><section><div class="center middle"><div style="width:100%"><div><h1 id="_1" class="text-2xl mt-2 font-sans">前端基础知识分享</h1><p class="font-serif my-1">
+    <include src="Slides_Author">
+        <div class="py-16">
+            <p class="font-serif my-1">
+                <a href="https://github.com/Kiritoabc" class=" text-amber-900">
+                    孙锦
+                </a>
+            </p>
+        </div>
+        <div class="row">
+            <p class="font-serif my-1"/>
+            
+            <div class="author-affiliation">
+                <a href="[杭州电子科技大学 (hdu.edu.cn)](https://www.hdu.edu.cn/main.htm)" class=" text-amber-900">
+                    <p class="font-serif my-1">
+                        　　杭州电子科技大学　
+                    </p>
+                    <img class="inline-img h-24" src=".\static\img\188782216efe48e79467c7b7bf16fe72.jpg" style="display: inline-block;"/>
+                </a>
+            </div>
+            
+            <div class="author-affiliation">
+                <a href="[计算机学院 (hdu.edu.cn)](https://computer.hdu.edu.cn/main.htm)" class=" text-amber-900">
+                    <p class="font-serif my-1">
+                        计算机学院
+                    </p>
+                    <img class="inline-img h-24" src=".\static\img\cd8abafc809343859a9f507184d1a3da.jpg" style="display: inline-block;"/>
+                </a>
+            </div>
+            
+            <div class="author-affiliation">
+                <a href="" class=" text-amber-900">
+                    <p class="font-serif my-1">
+                        Mooc社团
+                    </p>
+                    <img class="inline-img h-24" src=".\static\img\db7eeccc5671408a9a19e1739db67431.png" style="display: inline-block;"/>
+                </a>
+            </div>
+            
+        </div>
+    </include>
+</p></div></div></div></section><section><div><h2 id="overview" class="text-xl mt-2 pb-2 font-sans">Overview</h2>
+<p class="font-serif my-1">本次分享的主要内容</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">前端的简单介绍</li>
+<li class="ml-8">前端开发的一些准备</li>
+</ul></div></section></section><section><section><div class="center middle"><div style="width:100%"><div><h1 id="q1" class="text-2xl mt-2 font-sans">Q1: 为什么学前端?</h1></div></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">为什么学前端?</h2>
+<p class="font-serif my-1"><img class="float-right" src=".\static\img\6e0b72e3939d4f41833491796447a20f.jpg" width="300px"/></p>
+<p class="font-serif my-1">为什么学前端呢?</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">为什么要学微积分/离散数学/XXXX/……？</li>
+<li class="ml-8">长辈/学长：<del>擦干泪不要问为什么</del></li>
+</ul>
+<hr/>
+
+<p class="font-serif my-1">你的选择?</p><div class="fragment" data-fragment-index="1"><ul class="list-disc font-serif">
+<li class="ml-8">前端是入门门槛最低的编程领域之一?</li>
+<li class="ml-8">前端能够让你快速看到自己的成果?</li>
+<li class="ml-8">前端具有非常广阔的发展前景?</li>
+<li class="ml-8">都不是，只是学着玩？？？</li>
+</ul></div></div></section></section><section><section><div class="center middle"><div style="width:100%"><div><h1 id="q2" class="text-2xl mt-2 font-sans">Q2：到底什么是前端捏？</h1></div></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">什么是前端？</h2>
+<blockquote>
+<p class="font-serif my-1">Web前端: 顾名思义是来做Web的前端的。我们这里所说的前端泛指Web前端，也就是在Web应用中用户可以看得见碰得着的东西。包括Web页面的结构、Web的外观视觉表现以及Web层面的交互实现。</p>
+</blockquote>
+<hr/><div class="fragment" data-fragment-index="1"><p class="font-serif my-1">为此，前端开发者需要深入掌握三种语言： <strong>HTML</strong>、<strong>CSS</strong> 以及 <strong>Javascript</strong>。</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">HTML——超文本标记语言——是网页的骨架，是每个网站必备的基础。</li>
+<li class="ml-8">CSS——层叠样式表——是让HTML结果变得更加好看的样式规则。</li>
+<li class="ml-8">最后是 Javascript，它是网页动画与交互的魔法之源，也是构建一个 Web 应用的核心部分。</li>
+</ul></div></div></section><section><div><h2 id="-" class="text-xl mt-2 pb-2 font-sans">什么是前端---软件的分类</h2>
+<p class="font-serif my-1">系统软件
+<img src=".\static\img\a8ab8471679049f1876ddf4b571c1063.png"/></p><div class="fragment" data-fragment-index="1"><p class="font-serif my-1">应用软件
+<img src=".\static\img\32bbe4143b9b4dd0b2d29a65810ec9d9.png"/></p></div></div></section><section><div><h2 id="-" class="text-xl mt-2 pb-2 font-sans">什么是前端---客户端与服务器</h2>
+<p class="font-serif my-1">通常情况下，现在的软件一般由两个部分组成：</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">客户端：用户通过客户端来使用软件。</li>
+<li class="ml-8">服务器：服务器负责在远程处理业务逻辑。</li>
+</ul><div class="fragment" data-fragment-index="1"><p class="font-serif my-1">服务器开发的语言： Java,Node,PHP,C#,Python,Go......</p>
+<p class="font-serif my-1">客户端的形式:</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">文字客户端：占老的方式，通过命令行来使用软件</li>
+<li class="ml-8">图形化界面：通过点击拖动等来使用软件。Windows中、macOS中、Android、iOS中的大部分应用。（C/S架构）</li>
+<li class="ml-8">网页：通过访问网页来使用软件。所有的网站都属于这个范畴。（B/S架构）</li>
+</ul></div></div></section><section><div><h2 id="-" class="text-xl mt-2 pb-2 font-sans">什么是前端---网页的特点</h2>
+<p class="font-serif my-1">相较于传统的图形化界面，网页具有如下一些优点：</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">不需要安装</li>
+<li class="ml-8">无需更新</li>
+<li class="ml-8">跨平台</li>
+</ul>
+<p class="font-serif my-1">网页中使用的语言：</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">HTML、CSS、JavaScript
+<img src=".\static\img\92dc33cd24a742e3bbd7fd7b56384f8e.png"/></li>
+</ul></div></section></section><section><section><div class="center middle"><div style="width:100%"><div><h1 id="-htmlcssjs" class="text-2xl mt-2 font-sans">前端三剑客---HTML，CSS，JS</h1></div></div></div></section><section><div><h2 id="-" class="text-xl mt-2 pb-2 font-sans">前端三剑客---结构、表现、行为</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">结构（骨架）：HTML用于描述页面的结构</li>
+<li class="ml-8">表现（皮肤）：CSS用于控制页面中元素的样式</li>
+<li class="ml-8">行为（交互）：JavaScript用于响应用户操作</li>
+</ul><div class="fragment" data-fragment-index="1"><p class="font-serif my-1"><img src=".\static\img\c085dfd0090f48afac7f06476b506732.png"/></p></div></div></section><section><div><h2 id="-html" class="text-xl mt-2 pb-2 font-sans">前端三剑客---HTML</h2>
+<p class="font-serif my-1">什么是HTML</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">超文本标记语言（Hyper Text Mark-up Language）</li>
+<li class="ml-8">用来设计网页的标记语言</li>
+<li class="ml-8">用该语言编写的文件，以.html或.htm为后缀</li>
+<li class="ml-8">由浏览器解释执行</li>
+</ul></div></section><section><div><h2 id="-html" class="text-xl mt-2 pb-2 font-sans">前端三剑客---HTML</h2>
+<p class="font-serif my-1">HTML5的基本结构</p>
+<pre class="codehilite bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><code class="language-html">&lt;!-- 文档声明，声明当前网页的版本 --&gt;
+&lt;!doctype html&gt;
+&lt;!-- html的根标签（元素），网页中的所有内容都要写根元素的里边 --&gt;
+&lt;html&gt;
+    &lt;!-- head是网页的头部，head中的内容不会在网页中直接出现，主要用来帮助浏览器或搜索引擎来解析网页 --&gt;
+    &lt;head&gt;
+        &lt;!-- meta标签用来设置网页的元数据，这里meta用来设置网页的字符集，避免乱码问题 --&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;!-- title中的内容会显示在浏览器的标题栏，搜索引擎会主要根据title中的内容来判断网页的主要内容 --&gt;
+        &lt;title&gt;网页的标题&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;!-- body是htm1的子元素，表示网页的主体，网页中所有的可见内容都应该写在body里 --&gt;
+    &lt;body&gt;
+        &lt;!-- h1网页的一级标题 --&gt;
+        &lt;h1&gt;网页的大标题&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></section></section><section><section><div class="center middle"><div style="width:100%"><div><h1 id="_1" class="text-2xl mt-2 font-sans">前端开发的一些准备</h1></div></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">文本编辑器的选择</h2>
+<p class="font-serif my-1">VS Code</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">Microsoft出品，轻量但强大，针对于编写现代Web和云应用的跨平台源代码编辑器。可以在Mac OS X、Windows和 Linux等操作平台使用。</li>
+<li class="ml-8">具有对JavaScript、TypeScript和Node.js的内置支持，并具有丰富的其他语言（例如C++，C＃，Java，Python，PHP，Go）和运行时（例如.NET和Unity）扩展的生态系统。<ul class="list-disc font-serif">
+<li class="ml-8">优点：免费开源，轻量流畅，功能丰富，支持插件，界面简洁，智能代码补全，运行速度很快</li>
+<li class="ml-8">缺点：几乎没有什么太大的缺点</li>
+</ul>
+</li>
+</ul></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">文本编辑器的选择</h2>
+<p class="font-serif my-1">WebStorm</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">JetBrains 出品的智能 JavaScript IDE。誉为“Web前端开发神器”、“最强大的HTML5编辑器”、“最智能的JavaScript IDE”等。与IntelliJ IDEA同源，继承了IntelliJ IDEA强大的JS部分的功能。</li>
+<li class="ml-8">IntelliJ IDEA 是java编程语言开发的集成环境。IntelliJ在业界被公认为最好的java开发工具，尤其在智能代码助手、代码自动提示、重构、JavaEE支持、各类版本工具(git、svn等)、JUnit、CVS整合、代码分析、 创新的GUI设计等方面的功能可以说是超常的。它的旗舰版本还支持HTML，CSS，PHP，MySQL，Python等。免费版只支持Java,Kotlin等少数语言。<ul class="list-disc font-serif">
+<li class="ml-8">优点：功能强大，支持插件，界面美观，智能代码补全，快速搜索</li>
+<li class="ml-8">缺点：重量级，占内存；收费</li>
+</ul>
+</li>
+</ul></div></section></section><section><section><div class="center middle"><div style="width:100%"><div><h1 id="html" class="text-2xl mt-2 font-sans">HTML</h1></div></div></div></section><section><div><h2 id="html-" class="text-xl mt-2 pb-2 font-sans">HTML---字符实体</h2>
+<p class="font-serif my-1">有些时候，在HTML中不能直接书写一些特殊符号：</p>
+<p class="font-serif my-1"><img src=".\static\img\3dcfdbe0ec3d44f1afd0a9bc4e657567.png"/></p></div></section><section><div><h2 id="html-meta" class="text-xl mt-2 pb-2 font-sans">HTML---meta标签</h2>
+<p class="font-serif my-1">meta主要用于设置网页中的一些元数据，元数据并不是给用户看的
+<img src=".\static\img\8b2f142278f440938480afc8df90e534.png"/></p></div></section><section><div><h2 id="html-" class="text-xl mt-2 pb-2 font-sans">HTML---语义标签</h2>
+<p class="font-serif my-1">在网页中HTML专门用来负责网页的结构所以在使用html标签时，应该关注的是标签的语义，而不是它的样式</p>
+<hr/><div class="fragment" data-fragment-index="1"><ul class="list-disc font-serif">
+<li class="ml-8">标签: <code>&lt;h1&gt;</code> <code>&lt;h2&gt;</code> <code>&lt;h3&gt;</code> <code>&lt;h4&gt;</code> <code>&lt;h5&gt;</code> <code>&lt;h6&gt;</code></li>
+<li class="ml-8">作用: 标题</li>
+<li class="ml-8">描述: 一共有六级标题从h1~ h6重要性递减，h1最重要，h6最不重要h1在网页中的重要性仅次于title标签</li>
+</ul>
+<pre class="codehilite bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><code class="language-html">&lt;h1&gt;Beetles&lt;/h1&gt;
+&lt;h2&gt;External morphology&lt;/h2&gt;
+&lt;h3&gt;Head&lt;/h3&gt;
+&lt;h4&gt;Mouthparts&lt;/h4&gt;
+&lt;h5&gt;Thorax&lt;/h3&gt;
+&lt;h6&gt;Prothorax&lt;/h4&gt;
+</code></pre></div></div></section><section><div><h2 id="html-" class="text-xl mt-2 pb-2 font-sans">HTML---语义标签</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">标签: <code>&lt;p&gt;</code><ul class="list-disc font-serif">
+<li class="ml-8">作用: 段落</li>
+<li class="ml-8">描述: 页面中的一个段落。由空行或第一行缩进将相邻的文本块分开</li>
+</ul>
+</li>
+</ul>
+<hr/><div class="fragment" data-fragment-index="1"><ul class="list-disc font-serif">
+<li class="ml-8">标签: <code>&lt;br&gt;</code><ul class="list-disc font-serif">
+<li class="ml-8">作用: 换行</li>
+</ul>
+</li>
+</ul></div></div></section><section><div><h2 id="html-" class="text-xl mt-2 pb-2 font-sans">HTML---语义标签</h2>
+<p class="font-serif my-1">HTML5 提供的新语义元素有</p>
+<p class="font-serif my-1"><img src=".\static\img\7b4873d5d1a046e0b28e950d69b82edd.png"/></p></div></section><section><div><h2 id="html-" class="text-xl mt-2 pb-2 font-sans">HTML---布局标签</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">header表示网页的头部（页眉）</li>
+<li class="ml-8">main表示网页的主体部分（一个页面中只会有一个main）</li>
+<li class="ml-8">footer表示网页的底部（页脚）</li>
+<li class="ml-8">nav表示网页中的导航</li>
+<li class="ml-8">aside和主体相关的其他内容（侧边栏）</li>
+<li class="ml-8">article表示一个独立的文章</li>
+<li class="ml-8">section表示一个独立的区块，上边的标签都不能表示时使用section</li>
+<li class="ml-8">div 块元素，没有任何的语义，就用来表示一个区块。目前来讲，div还是主要的布局元素</li>
+<li class="ml-8">span 行内元素，没有任何的语义，一般用于在网页中选中文字</li>
+</ul></div></section><section><div><h2 id="html-" class="text-xl mt-2 pb-2 font-sans">HTML---其他标签</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">列表相关的</li>
+<li class="ml-8">超链接</li>
+<li class="ml-8">图片</li>
+<li class="ml-8">内联格式</li>
+<li class="ml-8">音频</li>
+<li class="ml-8">......</li>
+</ul>
+<p class="font-serif my-1"><a href="https://developer.mozilla.org/zh-CN/">推荐去MDN查看文档学习</a></p></div></section></section>
+        </div>
+    </div>
+
+    <script src="static/reveal/reveal.js"></script>
+
+    <script>
+        Reveal.initialize({
+
+            width: 1024, height: 768,
+
+            slideNumber: 'c/t',
+            controlsTutorial: false,
+            progress: false,
+            hash: true,
+            center: false,
+            autoAnimateUnmatched: true,
+            autoAnimateEasing: 'ease-out',
+            autoAnimateDuration: 0.3,
+            transitionSpeed: 'fast'
+        });
+    </script>
+</body>
+
+</html>
